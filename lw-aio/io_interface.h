@@ -2,7 +2,7 @@
 
 int read_file(char *path);
 
-int write_file(char *path, size_t size);
+int write_file(char *out, int size);
 
 void init();
 

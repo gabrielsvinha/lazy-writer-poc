@@ -70,13 +70,11 @@ int main(int argc, char *argv[])
 	}
 	const char *r = "r";
 	const char *w = "w";
-	init();
 	FILE *stream = fopen(argv[1], "r");
 	char line[1024];
 	while (fgets(line, 1024, stream))
 	{
 		char *tmp = strdup(line);
-		// printf("Field 3 would be %s\n", getfield(tmp, 3));
 		char **tokens = str_split(tmp, ',');
 		operation* op = {&tokens[0], &tokens[1], &tokens[2]};
 		if (strcmp(op->type, r) == 0)

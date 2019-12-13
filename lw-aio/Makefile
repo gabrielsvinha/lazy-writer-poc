@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS ?= -g -O2
-XCFLAGS =
+XCFLAGS =-lrt
 override CFLAGS += -Wall -D_GNU_SOURCE
 SRCS= io_interface.c main.c
 
